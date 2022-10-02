@@ -32,5 +32,5 @@ Url de Consumo : https://products-api-springboot.herokuapp.com
 
 <h1 align = "center">Progresso</h1>
 <h2 align="center"> 
-	🔋 Crud Loja <strong>Versão 1.0 - Completa</strong> 🔋  
+	🔋 ProductsApi SpringBoot <strong>Versão 1.0 - Completa</strong> 🔋  
 </h2>
