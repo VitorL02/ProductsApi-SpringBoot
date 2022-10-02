@@ -1,7 +1,7 @@
 package br.com.products.ProductsApiRest.models;
 
-
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
@@ -14,10 +14,13 @@ public class Produto implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @NotNull
     private String nome;
 
+    @NotNull
     private BigDecimal quantidade;
 
+    @NotNull
     private BigDecimal valor;
 
     public long getId() {

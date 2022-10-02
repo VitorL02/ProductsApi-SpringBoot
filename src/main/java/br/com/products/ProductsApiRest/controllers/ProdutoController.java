@@ -7,6 +7,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -31,13 +32,13 @@ public class ProdutoController {
 
     @PostMapping("/produto")
     @ApiOperation(value="Esse metodo insere um produto")
-    public Produto saveProduct(@RequestBody Produto produto){
+    public Produto saveProduct(@RequestBody @Valid Produto produto){
         return  productRepository.save(produto);
     }
 
     @DeleteMapping("/produto")
     @ApiOperation(value="Esse metodo deleta um produto")
-    public void deletProduct(@RequestBody Produto produto){
+    public void deletProduct(@RequestBody  @Valid Produto produto){
           productRepository.delete(produto);
     }
 
@@ -49,7 +50,7 @@ public class ProdutoController {
 
     @PutMapping("/produto")
     @ApiOperation(value="Esse metodo atualiza um produto")
-    public Produto editProduct(@RequestBody Produto produto){
+    public Produto editProduct(@RequestBody  @Valid Produto produto){
         return productRepository.save(produto);
     }
 
